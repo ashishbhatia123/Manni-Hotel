@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown with Textbox</title>
+  <style>
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #textbox {
+      display: none;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <select id="dropdown" onchange="toggleTextBox()">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+    <!-- Add more options as needed -->
+  </select>
+  
+  <input type="text" id="textbox" placeholder="Enter something...">
+</div>
+
+<script>
+  function toggleTextBox() {
+    var dropdown = document.getElementById("dropdown");
+    var textbox = document.getElementById("textbox");
+
+    if (dropdown.value === "option3") {
+      textbox.style.display = "block";
+    } else {
+      textbox.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

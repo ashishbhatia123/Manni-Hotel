@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.firstSectionHai {
+  display: flex;
+  padding-top: 10px;
+  padding-right: 1rem;
+}
+
+
+.secondSectionHai {
+  display: flex;
+  padding-top: 10px;
+  padding-right: 1rem;
+}
+
+.ekline12 {
+  display: flex;
+}
+
+.oneMore {
+  display: flex;
+}

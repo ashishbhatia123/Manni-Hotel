@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+
+
+    <!-- for add textboxes -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <link rel=”stylesheet” href=”//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”>
+    <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css”>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            margin-top: 1%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #rowAdder1 {
+            margin-left: 17px;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark text-light navbarColor">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">Trips</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Trips</a></li>
+                            <li><a class="dropdown-item" href="#">Sales Reports</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">Bookings</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hotel Bookings</a></li>
+                            <li><a class="dropdown-item" href="#">Cab Schedules</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="true">Accounting</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Incoming Payments</a></li>
+                            <li><a class="dropdown-item" href="#">Outgoing Payments</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Trip Checkout Reports</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">Accounts</a></li>
+                            <li><a class="dropdown-item" href="#">Transactions</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" id="searchbar" placeholder="Search for Trips"
+                        aria-label="Search" />
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle mx-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">Hotels</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Hotels</a></li>
+                            <li><a class="dropdown-item" href="#">Hotel Prices</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle mx-2" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">Transport</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">Transport Services</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Transport Service Prices</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Transport Service Providers</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-light dropdown-toggle mx-5" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="true">Button</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">My Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Organization</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container border border-success p-2 mb-2 border-opacity-25 rounded">
+        <div class="firstSectionHai">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="leftSide12">
+                        <h4>Hotels</h4>
+                        <p>
+                            Please add hotels details (if included in package) with services provided for each hotels
+                            and the selling cost price.
+                        </p>
+                        <p>
+                            Tip: To speed up the process of adding multiple hotels, use Next Night or Duplicate actions.
+                        </p>
+                    </div>
+                </div>
+                
+
+                <div class="col-md-7">
+                    <div class="ekline12">
+
+
+                        <div id="container">
+
+
+
+
+                            <button type="button" class="btn btn-primary" id="newsectionbtn"
+                                onclick="hideButton(this)">+ Add Hotels</button>
+
+   
+                        </div>
+
+
+                    </div>
+
+                  
+                </div>
+                <div class="col-md-5">
+                    <div class="ekline12">
+
+
+                        <div id="container2">
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+       
+            
+               
+                 
+                <section id="mainsection2" class="hidden">
+                    <div class="d-flex" style="height: 200px;">
+                        <div class="vr"></div>
+                        <div style="width:80%;">
+                            <form>
+                                <div class="">
+                                    <div class="col-lg-12">
+                                        <div id="row">
+                                            <div class="input-group m-3">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-danger" id="DeleteRow" type="button">
+                                                        <i class="bi bi-trash"></i>
+                                                        Delete
+                                                    </button>
+                                                </div>
+                                                <input type="text" id="add" class="form-control m-input">
+                                            </div>
+                                        </div>
+
+                                        <div id="newinput11"></div>
+                                        <button id="rowAdder1" type="button" class="btn btn-dark">
+                                            <span class="bi bi-plus-square-dotted">
+                                            </span> ADD
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+               
+
+
+                <section>
+
+
+
+                    <form>
+                        <section id="mainsection" class="hidden">
+
+                            <form class="needs-validation" novalidate>
+
+
+                                <div class="form-row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom01">Stay Nights</label>
+                                        <input type="text" class="form-control" id="validationCustom01"
+                                            placeholder="Select Night(s)" value="Select Night(s)" required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom02">Hotel</label>
+                                        <input type="text" class="form-control" id="validationCustom02"
+                                            placeholder="Type to search ..." value="Type to search ..." required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustomUsername">Meal Plan</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            </div>
+                                            <input type="text" class="form-control" id="validationCustomUsername"
+                                                placeholder="Type to search ..." aria-describedby="inputGroupPrepend"
+                                                required>
+                                            <div class="invalid-feedback">
+                                                Please choose a username.
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom021">Room Type</label>
+                                        <input type="text" class="form-control" id="validationCustom021"
+                                            placeholder="Type to search ..." value="Type to search ..." required>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationCustom03">City</label>
+                                        <input type="text" class="form-control" id="validationCustom03"
+                                            placeholder="City" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid city.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom04">State</label>
+                                        <input type="text" class="form-control" id="validationCustom04"
+                                            placeholder="State" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="validationCustom05">Zip</label>
+                                        <input type="text" class="form-control" id="validationCustom05"
+                                            placeholder="Zip" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid zip.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck"
+                                            required>
+                                        <label class="form-check-label" for="invalidCheck">
+                                            Agree to terms and conditions
+                                        </label>
+                                        <div class="invalid-feedback">
+                                            You must agree before submitting.
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" type="submit">Submit form</button>
+
+                            </form>
+
+
+
+                        </section>
+                    </form>
+                </section>
+
+
+
+
+
+
+                <hr>
+
+
+             
+
+
+
+                <button onclick="showTextboxes()">Click to Show Textboxes</button>
+                <br><br>
+                <label for="textbox1" id="label1" class="hidden">Textbox 1:</label>
+                <input type="text" id="textbox1" class="hidden"><br><br>
+                <label for="textbox2" id="label2" class="hidden">Textbox 2:</label>
+                <input type="text" id="textbox2" class="hidden"><br><br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTextboxes() {
+            document.getElementById('label1').classList.remove('hidden');
+            document.getElementById('textbox1').classList.remove('hidden');
+            document.getElementById('label2').classList.remove('hidden');
+            document.getElementById('textbox2').classList.remove('hidden');
+        }
+    </script>
+
+
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+
+<script type="text/javascript">
+                 
+    $("body").on("click", "#DeleteRow", function () {
+        $(this).parents("#row").remove();
+       
+    });
+    $("body").on("click", "#rowAdder1", function () {
+        newRowAdd =
+            '<div id="row"> <div class="input-group m-3">' +
+            '<div class="input-group-prepend">' +
+            '<button class="btn btn-danger" id="DeleteRow" type="button">' +
+            '<i class="bi bi-trash"></i> Delete</button> </div>' +
+            '<input type="text" class="form-control m-input"></div> </div>';
+        let newinput11Div = document.getElementById('newinput11');
+        $('#newinput11').append(newRowAdd);
+        
+
+    })
+    
+</script>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script>
+        function addChild() {
+            $('.child ').clone().find('input').val('').end().find('number').val('').end().appendTo('.moreProduct');
+        }
+        function removeChild() {
+            $('.moreProduct').last().remove();
+        }
+
+
+    </script>
+    <script>
+        // '--------------------------------------'
+
+        document.getElementById("newsectionbtn").onclick = function () {
+            var container = document.getElementById("container");
+            var section = document.getElementById("mainsection");
+            container.appendChild(section.cloneNode(true));
+
+            this.style.display = 'none';
+            document.getElementById('mainsection').classList.remove('hidden');
+
+            var container2 = document.getElementById("container2");
+            var section2 = document.getElementById("mainsection2");
+            container2.appendChild(section2.cloneNode(true));
+
+            this.style.display = 'none';
+            document.getElementById('mainsection2').classList.remove('hidden');
+            
+
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+
+
+</body>
+
+</html>
